@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Panitikang Katutubo</title>
+    <link rel="icon" type="images" href="images/icon.webp">
+    <style>
+        body {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(images/bg.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Merriweather', serif;
+            background-color: #f4e1c4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #4a2c1f;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 50px;
+            z-index: 1000;
+            background-color: #9c5b2e;
+            padding: 10px 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 500px;
+            display: flex;
+            gap: 20px;
+        }
+        
+        nav ul li {
+            display: inline;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px 15px;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgb(39, 22, 0);
+            border-radius: 5px;
+        }
+        
+        .contact-container {
+            max-width: 800px;
+            margin: 80px auto;
+            background: rgba(255, 255, 240, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            border: 2px solid #8b5a2b;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        
+        .contact-info img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        input,
+        textarea,
+        button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #8b5a2b;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        button {
+            background-color: #9c5b2e;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        button:hover {
+            background-color: #6d4c2a;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    </nav>
+
+    <div class="contact-container">
+        <h1>Makipag-ugnayan sa Amin</h1>
+        <div class="contact-info">
+            <img src="images/location.png" alt="Address">
+            <span>123 Kultura St., Maynila, Pilipinas</span>
+        </div>
+        <div class="contact-info">
+            <img src="images/phone.png" alt="Phone">
+            <span>+63 912 345 6789</span>
+        </div>
+        <div class="contact-info">
+            <img src="images/email.jpeg " alt="Email">
+            <span>info@panitikankatutubo.com</span>
+        </div>
+
+        <form action="send_email.php" method="post">
+            <input type="text" name="name" placeholder="Pangalan" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="5" placeholder="Mensahe" required></textarea>
+            <button type="submit">Ipadala</button>
+        </form>
+    </div>
+</body>
+
+</html>

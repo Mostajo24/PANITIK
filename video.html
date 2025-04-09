@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panitikang Katutubo</title>
+    <link rel="icon" type="images" href="images/icon.webp">
+    <link rel="stylesheet" href="video.css">
+</head>
+
+<body>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="video.html">VIDEOS</a></li>
+                <li><a href="manunulat.html">REFERENCES</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>KASAYSAYAN NG PANITIKANG PILIPINO</h1>
+            <p>FOLKLORE • ARTS • STORYTELLING</p>
+        </header>
+
+        <div class="container">
+            <div class="box" onclick="openModal('images/pre.mp4')">
+                <img src="images/prekolonyal.jpg" alt="Pre-Kolonyal">
+                <div class="description">Pre-Kolonyal</div>
+            </div>
+            <div class="box" onclick="openModal('images/kast.mp4')">
+                <img src="images/kastila.jpg" alt="Panahon ng Kastila">
+                <div class="description">Panahon ng Kastila</div>
+            </div>
+            <div class="box" onclick="openModal('images/kano.mp4')">
+                <img src="images/amerikano.jpg" alt="Panahon ng Amerikano">
+                <div class="description">Panahon ng Amerikano</div>
+            </div>
+            <div class="box" onclick="openModal('images/hapon.mp4')">
+                <img src="images/hapon.jpg" alt="Panahon ng Hapon">
+                <div class="description">Panahon ng Hapon</div>
+            </div>
+            <div class="box" onclick="openModal('images/kalayaan.mp4')">
+                <img src="images/kalayaan.jpg" alt="Panahon ng Kalayaan">
+                <div class="description">Panahon ng Kalayaan</div>
+            </div>
+        </div>
+
+        <div id="videoModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <video id="videoPlayer" width="600" controls autoplay>
+                    <source id="videoSource" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <script>
+            function openModal(videoSrc) {
+                document.getElementById("videoSource").src = videoSrc;
+                document.getElementById("videoPlayer").load();
+                document.getElementById("videoModal").style.display = "flex";
+            }
+
+            function closeModal() {
+                document.getElementById("videoModal").style.display = "none";
+                document.getElementById("videoPlayer").pause();
+            }
+        </script>
+    </body>
+
+    </html>
